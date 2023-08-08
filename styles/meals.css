@@ -1,0 +1,105 @@
+#meal-title {
+    color: rebeccapurple;
+    font-family: 'Arial', Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    text-align: center;
+}
+
+.meal-section img {
+    float: right;
+    margin-left: 15px;
+    width: 30em;
+    height: 25em;
+}
+
+.meal-process {
+    font-size: 18px;
+}
+
+.meal-style {
+    color: purple;
+    font-family: 'Arial', Helvetica, sans-serif;
+    font-weight: 800;
+}
+
+.img-gallery {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px 20px;
+}
+
+.gallery-content {
+    position: relative;  
+}  
+
+.gallery-content img {
+    object-fit: cover;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.img-heading {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4em;
+    width: 100%;
+    background-color: rgba(211, 239, 252,0.7);
+}
+
+.show {
+    display: block;
+}
+
+.img-heading h4 {
+    color: brown;
+    margin: auto;
+}
+
+.img-heading h4:hover {
+    color: rgb(241, 49, 184);
+    cursor: pointer;
+}
+
+.img-heading a {
+    text-decoration: none;
+    color: rgb(138, 15, 62);
+}
+
+
+.abt-us {
+    text-align: justify;
+    font-size: 18px;
+}
+
+/* form */
+.form {
+    width: 50%;
+    /* height: 300px; */
+    border: 0.5px solid rgba(241, 49, 184, 0.4);
+    border-radius: 15px;
+    font-size: 18px;
+}
+
+.social-media {
+    text-align: center;
+    margin: 2px auto;
+}
+
+.btns {
+    margin: 10px auto;
+    text-align: center;
+    width: 60%;
+}
+
+.btns span {
+    margin-right: 20px;
+}
+
+#submit {
+    margin: 10px 160px;
+    text-align: center;
+    width: 30%;
+}

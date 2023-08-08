@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    font-size: 22px;
+    margin: 5px auto;
+    position: relative;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: whitesmoke;
+    padding: 10px;
+    font-weight: bold;
+    background-color: rgba(224, 81, 162,0.8);
+}
+
+#navbar h1 {
+    font-size: 30px;
+    margin-left: 120px;
+    border-bottom: 3px solid rgb(234, 234, 31);
+    border-radius: 10px;
+}
+
+.menu ul{    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 50px;
+    padding: 10px;
+}
+
+.sub-menu {
+    display: none;
+}
+
+#navbar li {
+    list-style: none;
+    margin-right: 120px;
+}
+
+#navbar li:hover {
+    color: rgb(243, 236, 40);
+    cursor: pointer;
+}
+
+.content-part {
+    margin-left: 20px;
+    padding: 10px;
+    font-size: inherit;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: 24% auto;
+    text-align: justify;
+    margin-right: 10px;
+}
+
+h5 {
+    font-size: 20px;
+    color: rgb(241, 49, 184);
+    border-bottom: 2px solid rgb(160, 80, 235);
+    width: fit-content;
+}
+
+h3 {
+    font-size: 26px;
+    color: rgb(160, 80, 235);
+    border-bottom: 2px solid rgb(241, 49, 184);
+    width: fit-content;
+}
+
+#sidebar-1 {
+    padding: 20px;
+    height: 400px;
+}
+
+.side-content {
+    list-style: none;
+    margin: 10px 15px;
+    color: rgb(160, 80, 235);
+    border-radius: 20px;
+    border: 1px solid rgba(224, 81, 162,0.8);
+}
+
+.side-content li {
+    padding: 10px;
+}
+
+.side-content li a, ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.sub-category {
+    margin: 0;
+    padding: 0;
+}
+
+.heading {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0;
+    margin-bottom: 5px;
+    border-bottom: 5px solid rgb(241, 49, 184);
+    width: fit-content;
+}
+
+li {
+    list-style: circle;
+    font-size: 18px;
+    font-weight: 500px;
+    margin-left: 18px;
+}
+
+.side-content li:hover{
+    cursor: pointer;
+    color: rgb(241, 49, 184);
+    border-bottom: 1px dashed rgb(160, 80, 235);
+    width: fit-content;
+}
+
+#footer {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    /* height: 80px; */
+    color: whitesmoke;
+    background-color: rgba(224, 81, 162,0.8);
+    position: static;
+    bottom: 0;
+    left: 0;
+}
+
+#footer p {
+    margin: 0;
+    padding: 10px;
+}
+

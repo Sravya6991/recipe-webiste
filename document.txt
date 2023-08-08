@@ -1,0 +1,84 @@
+Recipe Book App:
+
+    ->  Created simple recipe website using html,css and js.
+    ->  Used MealDB API for recipes.
+
+Structure of website:
+--------------------------------------------
+-> Header section - navigator bar consists of Home, Menu page and about us page
+-> Middle section - Divided into 2 section :
+    1. Side-Bar Menu:  Consists of 
+        [1]. Search based on category of meals and 
+        [2]. Search based on Area of meals - Starter, soup, main course,dessert
+
+    2. Content ssection: Displays the content based on search of side-bar menu.
+
+-> Footer section - Displays patent rights and contact us page link.
+
+
+Problem Solve 
+-----------------------------------------
+1. Created HTML page for each category - breakfast, chciken, pasta, seafood, vegan etc...
+2. Created categories.html for browsing different meal category by clicking on each of the meals.
+3. Styled these pages in 3 files - 
+    [1]. styles.css: Where all base styles is coded here.
+    [2]. meals.css: Where main-content is styled.
+    [3]. media.css: Where responsive-website style is coded here.
+4. Javascript:
+    [1]. app.js: 
+        -> This is where meal recipe item fetched based on meal name.
+        -> Used MealDB API - "search meal by name" url
+        i.  mealTitle, ingredients, process, img is declared
+        ii. showMeal():- fetch(url) .then(res) createMeal(res)
+        iii. createMeal(data):- 
+                1. title = data.strMeal;
+                2. Making/Process:
+                mealMake = data.strInstruc;
+                    mealCont = [];
+                    mealCont.push(mealMake.split('.')); // Split: String -> Array
+                    create 'p' element;
+                    mealCont.forEach(el => p.innerhtml = ${el.join('')}); // Convert array -> string
+                3. Ingredients:
+                    let ingd = [];
+                    for(1 to 20): 
+                        ingd.push(data.strIngd - data.strMeasure)
+                    newHtml = <ul> ingd.forEach(item => <li>${item}</li>) </ul>
+                    mealIngd = newHtml;
+                4. export {meaTitle, Process, ingd, createMeal}
+
+        
+    [2]. meal.js: 
+        -> This where all meal categories have a common url request and import createMeal() function
+        i.   import {mealTitle, process, ingd, createMeal}
+        ii.  searchURL = " search?s=" // search meal by name;
+        iii. btn.addeventlist('click), ()=>{ 
+                searchTerm = select.value 
+                searchFood(searchurl + searchTerm)
+            }
+        iv.  searchFood(url) .then(res) createMeal(data.meals[0])
+        v. Follow above app.js - step-iii. 
+
+        Experiment: 
+        -----------
+        Get 'strMeal - tittle/names' of meal data from api and put data inside 'select-option' tags.
+    
+        selectList = "https://www.themealdb.com/api/json/v1/1/filter.php?c=chicken"
+        fetch(selectList)
+            .the(res => res.json())
+            .then((data)=>{
+                // here 'data' is in object format. Convert object -> Array to extract data.
+                let arr = Object.entries(data);
+                // now arr = ['meals', ['meal name1', 'meal name2', ...]]
+
+                // Convert 2D to 1D using flat() method
+                let sp = arr.flat(1)
+                // now sp = ['meals','meal name1', 'meal name2', ...]
+
+                // loop through this sp and put it inside 'selct-option' tags
+                let select = docu.createElement('select');
+                for(i=1; i<=sp.length; i++){ // skip i=0 coz of string 'meals' at position 0
+                    let opt = docu.createElement('option');
+                    opt.innerHTML = sp[i].strMeal;
+                    select.appendChild(opt);
+                }
+            })
